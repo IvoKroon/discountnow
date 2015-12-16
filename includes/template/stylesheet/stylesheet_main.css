@@ -1,0 +1,105 @@
+/*
+COLORS
+First blue : #446CB3
+Second blue : #6BB9F0
+Third blue : #4183D7
+*/
+
+
+html,body{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+html{
+    min-height: 100%;
+    position: relative;
+
+}
+h1{
+    margin: 0;
+}
+
+.login_register{
+    float:right;
+    margin-right: 50px;
+}
+.navbar{
+    border: none;
+    border-radius: 0px;
+}
+
+#navbar{
+}
+nav li{
+    border-left: solid black 1px;
+}
+nav li:last-child{
+    border-right: solid black 1px;
+}
+
+.logo{
+    color: white;
+    display: inline-block;
+    margin:auto;
+}
+.header_top{
+    color: white;
+    background: #4183D7;
+    height: 50px;
+}
+nav{
+    background:#222222;
+}
+nav #container{
+    background: black;
+}
+
+#container{
+    padding-top: 50px;
+    min-width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+
+/* design blocks */
+
+.disc_block_content{
+
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.disc_block h4{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.disc_block p{
+    margin-left: 5px;
+}
+
+.disc_block{
+    vertical-align: top;
+    margin-bottom: 20px;
+    background: #999;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin-right:20px;
+}
+
