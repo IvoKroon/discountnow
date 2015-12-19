@@ -72,5 +72,18 @@ class Discount extends Model
         return $return_data;
     }
 
-
+    public function showAllDiscountsByTypeId($id)
+    {
+        try {
+            $query = "SELECT * FROM discount WHERE type_id = :id";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(
+                ":id" => $id
+            ));
+            $return_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return $e->errorInfo;
+        }
+        return $return_data;
+    }
 }

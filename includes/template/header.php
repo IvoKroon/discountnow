@@ -42,9 +42,9 @@ if($header->checkLoggedIn()) {
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="<?= HOME_LINK ?>">Alle producten</a></li>
-          <li><a title="Bedrijven" href="bedrijven">Bedrijven</a></li>
-          <li><a title="Bedrijven" href="type">Types</a></li>
-          <li><a title="Bedrijven" href="contact">Contact</a></li>
+          <li><a title="Bedrijven" href="<?=ROOT_URL?>bedrijven">Bedrijven</a></li>
+          <li><a title="Bedrijven" href="<?=ROOT_URL?>type">Types</a></li>
+          <li><a title="Bedrijven" href="<?=ROOT_URL?>contact">Contact</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

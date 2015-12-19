@@ -1,7 +1,7 @@
 <?php
 class DiscountController {
 
-    private $_discount;
+    public $_discount;
 
     public function __construct()
     {
@@ -18,6 +18,13 @@ class DiscountController {
 
     public function showTop4Best(){
         return $this->_discount->getNewestDiscounts();
+    }
+
+    public function getAllDiscountsByType(){
+        if(isset($_GET['id'])){
+            $type_id = $_GET['id'];
+            return $this->_discount->showAllDiscountsByTypeId($type_id);
+        }
     }
 
 }
