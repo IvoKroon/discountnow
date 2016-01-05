@@ -75,7 +75,8 @@ nav #container{
 
 
 #container{
-    min-width: 100%;
+    margin-left: 8%;
+    margin-right: 8%;
     padding-bottom: 60px;
 }
 
@@ -92,8 +93,6 @@ nav #container{
 /* design blocks */
 
 .disc_block_holder{
-    margin-left: 8%;
-    margin-right: 8%;
     margin-bottom: 10px;
 }
 .disc_block_content h4{
