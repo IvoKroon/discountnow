@@ -26,24 +26,20 @@ class Company extends Model
         return $this->_companys;
 
     }
-    public function countTaskOffCompany($id){
-        try {
-            $query = "  SELECT company.id, company.name, COUNT(discount.id) as count
-                        FROM company
-                        LEFT JOIN discount
-                        ON company.id = discount.company_id
-                        GROUP BY company.name
-                        ORDER BY company.id
-                        ";
-            $stmt = $this->connection->prepare($query);
-            $stmt->execute(array(":company_id" => $id));
-            $result = $stmt->fetch();
-        }catch (PDOException $e){
-            return $e->getMessage();
-        }
-        print_r($result);
-        return $result;
 
+    public function getCompanyById($id){
+        try{
+            $query = "SELECT * FROM company WHERE id = :id";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":id" => $id));
+            $result = $stmt->fetch();
+            if(!$result) {
+                return null;
+            }
+        }catch (PDOException $e){
+            return $e;
+        }
+        return $result;
     }
 
 

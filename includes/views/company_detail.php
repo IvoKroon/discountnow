@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ivokroon
- * Date: 05/01/16
- * Time: 14:55
- */
+$company = new CompanyController();
+$company_detail = $company->detail_data();
+
+?>
+
+<h1><?= $company_detail['name'] ?></h1>

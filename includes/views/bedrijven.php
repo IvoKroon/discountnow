@@ -2,7 +2,6 @@
 
 $company = new CompanyController();
 $data_array = $company->load_data();
-
 //foreach ($data as $row){
 //    echo $row['amound_discount'];
 //    echo '</br>';
