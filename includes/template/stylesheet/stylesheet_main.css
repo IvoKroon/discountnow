@@ -17,6 +17,16 @@ html{
     position: relative;
 
 }
+
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
 h1{
     margin: 0;
 }
@@ -30,13 +40,26 @@ h1{
     border-radius: 0px;
 }
 
-#navbar{
+.navbar-nav > li > a {
+    color: #666;
+    background: none;
+}
+
+.navbar-nav > li > a:hover {
+    color: #777;
+    background: none;
 }
 nav li{
-    border-left: solid black 1px;
+    border-left: solid white 1px;
 }
 nav li:last-child{
-    border-right: solid black 1px;
+    border-right: solid white 1px;
+}
+nav{
+    background:#222222;
+}
+nav #container{
+    background: black;
 }
 
 .logo{
@@ -49,21 +72,16 @@ nav li:last-child{
     background: #4183D7;
     height: 50px;
 }
-nav{
-    background:#222222;
-}
-nav #container{
-    background: black;
-}
+
 
 #container{
-    padding-top: 50px;
     min-width: 100%;
+    padding-bottom: 60px;
 }
 
 .footer {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
@@ -73,32 +91,37 @@ nav #container{
 
 /* design blocks */
 
-.disc_block_content{
-    margin-left: 50px;
-    margin-right: 50px;
+.disc_block_holder{
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 10px;
 }
-.disc_block h4{
-    width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.disc_block_content h4{
     font-size: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-left: 5px;
 }
 
-.disc_block p{
+.disc_block_content p{
     margin-left: 5px;
 }
 
 .disc_block{
-    vertical-align: top;
-    margin-bottom: 20px;
-    background: #999;
+    height: 250px;
+    max-height: 250px;
+}
+
+.disc_block_content{
     display: inline-block;
-    height: 200px;
-    width: 200px;
-    margin-right:35px;
+    background: #ECF0F1;
+    min-height: 100%;
+    width: 100%;
+    /*min-height: 100%;*/
+    /*min-width: 100%;*/
+    /*margin-top: -10px;*/
+}
+.disc_img{
+    height: auto;
+    width: 100%;
 }
 
 /*homepage*/
