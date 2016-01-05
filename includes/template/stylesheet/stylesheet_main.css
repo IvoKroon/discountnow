@@ -96,6 +96,7 @@ nav #container{
     margin-bottom: 10px;
 }
 .disc_block_content h4{
+    text-align: center;
     font-size: 25px;
     margin-left: 5px;
 }
@@ -104,7 +105,7 @@ nav #container{
     margin-left: 5px;
 }
 
-.disc_block{
+.disc_block {
     height: 250px;
     max-height: 250px;
 }
@@ -119,7 +120,7 @@ nav #container{
     /*margin-top: -10px;*/
 }
 .disc_img{
-    height: auto;
+    height: 150px;
     width: 100%;
 }
 
@@ -138,4 +139,31 @@ nav #container{
 
 .title_container a{
     padding-left: 5px;
+}
+
+/*COMPANY PAGE*/
+
+.disc_block_company{
+    height: 250px;
+    max-height: 250px;
+    margin-bottom: 20px;
+}
+
+.amount_discounts{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    float: left;
+    height: 40px;
+    width: 40px;
+    background: lightblue;
+    border-radius: 50%;
+    vertical-align:middle;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.image_holder{
+    position: relative;
 }
