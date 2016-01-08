@@ -1,5 +1,5 @@
 <?php
-$company = new CompanyController();
+$company = new Company_detailController();
 $company_detail = $company->detail_data();
 
 ?>

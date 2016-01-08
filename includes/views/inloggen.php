@@ -6,7 +6,7 @@ if(isset($_POST['submit'])) {
     $password = $_POST['password'];
 
     if($data = $user->login($email,$password)){
-        echo 'gelukt';
+        header("location: http://localhost/discountnow/");
     }else{
         echo 'Er ging iets fout probeer het nog eens. '.$data;
     }

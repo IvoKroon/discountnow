@@ -1,7 +1,7 @@
 <?php
 $data = new HomeController();
 $discounts = new DiscountController();
-$type = new TypeController();
+//$type = new TypeController();
 $data_newest = $discounts->showNewestDiscounts();
 $data_top4 = $discounts->showTop4Best();
 ?>

@@ -2,6 +2,5 @@
 $user = new UsersController();
 
 $user->logout();
+RedirectController::redirectToHome();
 ?>
-
-<h1> U bent succesvol uitgelogd.</h1>
