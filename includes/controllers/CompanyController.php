@@ -20,6 +20,9 @@ class CompanyController
     }
 
     public function detail_data(){
+//        return ("huh")x;
+        print_r("LOL");
+        print_r($this->_company->checkIdWithCompany(1));
         if(isset($_GET['id'])){
             $id = $_GET['id'];
             $company = $this->_company->getCompanyById($id);
@@ -28,7 +31,7 @@ class CompanyController
             if(!empty($company)){
                 return $company;
             }else{
-                RedirectController::to()
+                RedirectController::error();
                 return null;
             }
         }else{

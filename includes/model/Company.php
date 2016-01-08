@@ -27,7 +27,24 @@ class Company extends Model
 
     }
 
+    public function checkIdWithCompany($id){
+//        return "huh";
+        try {
+            $query = "SELECT COUNT(id) FROM company WHERE id = :id";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":id",$id));
+            $result = $stmt->fetch();
+//            return ($result == 0)? false: true;
+            return "YEAH";
+        }catch (PDOException $e){
+            return "error";
+        }
+
+
+    }
+
     public function getCompanyById($id){
+//        echo $this->checkIdWithCompany(2);
         try{
             $query = "SELECT * FROM company WHERE id = :id";
             $stmt = $this->connection->prepare($query);
