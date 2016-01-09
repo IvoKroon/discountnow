@@ -188,3 +188,10 @@ nav #container{
     text-align: center;
     padding-bottom: 20px;
 }
+
+/*jquery actions*/
+
+.de_save_button{
+    /*background: darkred;*/
+    opacity: 0.5;
+}
