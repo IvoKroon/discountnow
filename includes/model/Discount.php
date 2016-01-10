@@ -49,10 +49,22 @@ class Discount extends Model
         return $this->products;
     }
 
-    public function getNewestDiscounts(){
+    public function getFourNewestDiscounts(){
         try {
             //select the first 4 dates
             $query = "SELECT *, MAX(start_date)  FROM discount GROUP BY id LIMIT 4;";
+            $stmt = $this->connection->query($query);
+            $return_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e){
+            return "ERROR";
+        }
+        return $return_data;
+    }
+
+    public function getAllNewestDiscounts(){
+        try {
+            //select the first 4 dates
+            $query = "SELECT *, MAX(start_date)  FROM discount GROUP BY id LIMIT 20;";
             $stmt = $this->connection->query($query);
             $return_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }catch (PDOException $e){

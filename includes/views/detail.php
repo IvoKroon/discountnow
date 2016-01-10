@@ -1,6 +1,13 @@
-<?php $detailController = new DetailController();
+<?php
+
+$detailController = new DetailController();
 $data = $detailController->showDetailData();
+//print_r()
 ?>
-<h1><?= $data['title'] ?> </h1>
-<p><?= $data['description'] ?></p>
-<button value="<?= $data['id'] ?>" class="save_button_disc">Opslaan</button>
+<h1><?= $data['data']['title'] ?> </h1>
+<p><?= $data['data']['description'] ?></p>
+<?php if($data['saved']){  ?>
+    <button value="<?= $data['data']['id'] ?>" class="save_button_disc de_save_button">Verwijderen</button>
+<?php }else{ ?>
+    <button value="<?= $data['data']['id'] ?>" class="save_button_disc">Opslaan</button>
+<?php }

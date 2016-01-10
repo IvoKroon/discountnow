@@ -13,11 +13,11 @@ class DiscountController {
     }
 
     public function showNewestDiscounts(){
-        return $this->_discount->getNewestDiscounts();
+        return $this->_discount->getFourNewestDiscounts();
     }
 
     public function showTop4Best(){
-        return $this->_discount->getNewestDiscounts();
+        return $this->_discount->getFourNewestDiscounts();
     }
 
     public function getAllDiscountsByType(){
