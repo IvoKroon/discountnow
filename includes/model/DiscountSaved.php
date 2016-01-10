@@ -51,4 +51,31 @@ class DiscountSaved extends Model
 
     }
 
+    public function removeSavedDiscount($id,$userId){
+        try{
+            $query = "DELETE FROM discount_saved WHERE user_id = :uId AND discount_id = :dId";
+            $stmt = $this->connection->prepare($query);
+
+            if($stmt->execute(array(":uId"=>$userId, ":dId"=>$id))){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e){
+            return "Error";
+        }
+    }
+
+    public function addSavedDiscount($dId,$userId){
+        $query = "INSERT INTO discount_saved (discount_id, user_id) VALUES (:dId, :user_id)";
+        $stmt = $this->connection->prepare($query);
+
+        if($stmt->execute(array(":dId" => $dId, ":user_id"=>$userId))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

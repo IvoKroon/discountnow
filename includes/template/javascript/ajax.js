@@ -9,17 +9,24 @@ $(".save_button_disc").on("click", function(){
         button.removeClass("de_save_button");
         button.html("Opslaan");
 
+        var dId = button.data("discountid");
+        doAjax(ROOT_URL+"ajax/save_discount_ajax.php","POST", {data:"remove_saved",dId:dId});
+
     }else{
         button.addClass("de_save_button");
         button.html("Verwijderen");
+
+        var dId = button.data("discountid");
+        doAjax(ROOT_URL+"ajax/save_discount_ajax.php","POST", {data:"add_saved",dId:dId});
     }
 });
 
 function doAjax(link, kind, dataArray) {
     var request = $.ajax({
-        url: link,
         method: kind,
-        data: dataArray
+        url: link,
+        data: dataArray,
+        //dataType: "json"
     });
 
     request.done(function (msg) {
