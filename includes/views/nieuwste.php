@@ -1,5 +1,7 @@
 <?php
 
+//TODO add load more button to load more discounts.
+
 $discounts = new Discount();
 $getNewest = $discounts->getAllNewestDiscounts();
 ?>
