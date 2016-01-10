@@ -7,6 +7,13 @@ class UsersController{
         return $user->login($email,$password);
     }
 
+    public function checkLoggedIn(){
+        $user = new SessionController();
+        if(!isset($user->get("user_session")['user_id'])){
+            RedirectController::to(ROOT_URL."inloggen");
+        }
+    }
+
 
 
     public function register(){

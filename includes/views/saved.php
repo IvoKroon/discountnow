@@ -1,5 +1,8 @@
 <?php
 
+$user = new UsersController();
+$user->checkLoggedIn();
+
 $getAllSaved = new DiscountSavedController();
 $allSaved = $getAllSaved->showAll();
 

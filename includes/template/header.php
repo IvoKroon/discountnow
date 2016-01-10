@@ -33,6 +33,7 @@ $header = new HeaderController();
             <span class="caret"></span>
           </div>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
             <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
           </ul>
         </div>
