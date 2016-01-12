@@ -2,6 +2,8 @@
 ob_start();
 session_start();
 require_once(__DIR__."/../controllers/HeaderController.php");
+//$session = $_SESSION["user_session"]['level'];
+$session_data = SessionController::get("user_session");
 $header = new HeaderController();
 ?>
 <!DOCTYPE html>
@@ -35,13 +37,14 @@ $header = new HeaderController();
 <!--          SHOW DROPDOWN WHEN USER IS LOGGED IN NORMAL USER-->
         <div class="dropdown">
           <div class="" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <?= ucfirst($header->getSessionData()['name']) ?>
+            <?= ucfirst($session_data['name']) ?>
             <span class="caret"></span>
           </div>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <!-- ADMIN NORMAL USER -->
-            <?php if(SessionController::check("user_data")['level'] == 1){ ?>
+
+            <?php if($session_data['level'] == 1){ ?>
               <!-- ADMIN USER -->
               <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
               <li><a href="<?= ROOT_URL ?>add_discount">add</a></li>

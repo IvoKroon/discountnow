@@ -1,1 +1,1 @@
-<?php
+<h1>Kortings codes toevoegen</h1>

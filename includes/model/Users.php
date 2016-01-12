@@ -65,6 +65,7 @@ class Users extends model
                     "name" => $this->_data['name']." ".$this->_data['lastname'],
                     "level" =>$this->_data['level']
                 ));
+                $session->set("level",$this->_data['level']);
                 return true;
 //                RedirectController::to("/kortingennu/");
             }
