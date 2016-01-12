@@ -14,6 +14,17 @@ class UsersController{
         }
     }
 
+    public function checkCompanyLoggedIn(){
+        $user = new SessionController();
+        if(isset($user->get("user_session")['user_id'])){
+            if($user->get("user_session")['level'] != 1){
+                RedirectController::to(ROOT_URL."404");
+            }
+        }else{
+            RedirectController::to(ROOT_URL."login");
+        }
+    }
+
 
 
     public function register(){

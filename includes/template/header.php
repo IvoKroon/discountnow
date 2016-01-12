@@ -1,9 +1,12 @@
 <?php
 ob_start();
 session_start();
-require_once(__DIR__."/../controllers/HeaderController.php");
-//$session = $_SESSION["user_session"]['level'];
+//require_once(__DIR__."/../controllers/HeaderController.php");
 $session_data = SessionController::get("user_session");
+if($session_data['level'] == 1){
+  $company = new Company();
+  $company_data = $company->getCompanyByUserId();
+}
 $header = new HeaderController();
 ?>
 <!DOCTYPE html>
@@ -17,6 +20,8 @@ $header = new HeaderController();
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <!--  Load main stylesheet-->
   <link href="<?= ROOT_URL ?>includes/template/stylesheet/stylesheet_main.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 </head>
 <body>
@@ -48,6 +53,7 @@ $header = new HeaderController();
               <!-- ADMIN USER -->
               <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
               <li><a href="<?= ROOT_URL ?>add_discount">add</a></li>
+              <li><a href="<?= ROOT_URL ?>company_profile"><?= $company_data['name'] ?></a></li>
               <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
 
             <?php }else{ ?>

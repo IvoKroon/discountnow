@@ -31,9 +31,10 @@ h1{
     margin: 0;
 }
 
-.login_register{   position: absolute;
-    bottom: 0;
-    right: 50px;
+.login_register{
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
 }
 .navbar{
     border: none;
@@ -78,7 +79,6 @@ nav #container{
     color: white;
     background: #4183D7;
     height: 75px;
-    position: relative;
 }
 
 
@@ -111,7 +111,6 @@ nav #container{
     text-overflow: clip;
     overflow: hidden;
     margin-right: 10px;
-    margin-left: 10px;
 }
 
 .disc_block_content p{
@@ -126,7 +125,8 @@ nav #container{
 .disc_block_content{
     display: inline-block;
     background: #ECF0F1;
-    min-height: 100%;
+    min-height: 280px;
+    max-height: 280px;
     width: 100%;
     overflow: auto;
 

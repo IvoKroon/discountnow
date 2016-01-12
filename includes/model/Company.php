@@ -59,5 +59,18 @@ class Company extends Model
         return $result;
     }
 
+    public function getCompanyByUserId(){
+        try {
+            $query = "SELECT * FROM company WHERE user_id = :id";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":id"=>$this->_user_id));
+            $result = $stmt->fetch();
+            return $result;
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+
+    }
+
 
 }

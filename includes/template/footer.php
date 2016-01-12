@@ -6,6 +6,7 @@
 </footer>
 <!--  Load own jquery-->
 <script src="<?= ROOT_URL ?>includes/template/javascript/jquery.js"></script>
+<script src="<?= ROOT_URL ?>includes/template/javascript/jquery-ui/jquery-ui.js"></script>
 <!--  Load bootstrap javascript-->
 <script src="<?= ROOT_URL ?>includes/template/bootstrap/js/bootstrap.min.js"></script>
 <!-- Ajax -->

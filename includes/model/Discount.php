@@ -98,4 +98,37 @@ class Discount extends Model
         }
         return $return_data;
     }
+
+    public function addNewDiscount($title,$description,$type_id,$amount,$startdate,$enddate,$points = 0,$kind = 0 ){
+        $company = new Company();
+        $company_id = $company->getCompanyByUserId($this->_user_id)['id'];
+
+        $image_id = 1;
+
+        try{
+
+            $query = "INSERT INTO
+                      discount (title,description,typy_id,kind,image_id,points,company_id,amount,end_data,start_date)
+                      VALUES (:title,:description,:type_id,:kind,:image_id,:points,:company_id,:amount,:end_date,:start_date)";
+
+            $stmt = $this->connection->prepare($query);
+            $stmt->bindParam(':title',$title);
+            $stmt->bindParam(':description',$description);
+            $stmt->bindParam(':type_id',$type_id);
+            $stmt->bindParam(':kind',$kind);
+            $stmt->bindParam(':image_id',$image_id);
+            $stmt->bindParam(':points',$points);
+            $stmt->bindParam(':company_id',$company_id);
+            $stmt->bindParam(':company_id',$company_id);
+            $stmt->bindParam(':amount',$amount);
+            $stmt->bindParam(':end_date',$enddate);
+            $stmt->bindParam(':start_date',$startdate);
+
+            $stmt->execute();
+
+            return ($stmt->fetch())? true: false;
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
 }

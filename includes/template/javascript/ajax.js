@@ -1,6 +1,11 @@
 /**
  * Created by ivokroon on 08/01/16.
  */
+$(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+});
+
 var ROOT_URL = "http://localhost/discountnow/";
 
 $(".save_button_disc").on("click", function(){
