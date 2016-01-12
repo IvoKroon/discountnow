@@ -18,13 +18,10 @@ class DiscountSaved extends Model
 
     public function get(){
         try {
-            $session = new SessionController();
-            $user_id = $session->get('user_session')['user_id'];
-
-            $query = "SELECT discount.title, discount.end_date FROM discount INNER JOIN discount_saved ON discount_saved.discount_id = discount.id WHERE discount_saved.user_id = :id";
+            $query = "SELECT discount.id,discount.title,discount.description, discount.end_date FROM discount INNER JOIN discount_saved ON discount_saved.discount_id = discount.id WHERE discount_saved.user_id = :id";
             $stmt = $this->connection->prepare($query);
 //            $statement = $this->connection->prepare($query);
-            $stmt->execute(array(":id" => $user_id));
+            $stmt->execute(array(":id" => $this->_user_id));
             $result = $stmt->fetchAll();
         }catch (PDOException $e){
             return $e->getMessage();
@@ -34,9 +31,9 @@ class DiscountSaved extends Model
 
     public function checkDiscountIsSavedByUserId($id){
         try {
-            $query = "SELECT id FROM discount_saved WHERE discount_id = :id";
+            $query = "SELECT id FROM discount_saved WHERE discount_id = :id AND user_id = :user_id";
             $stmt = $this->connection->prepare($query);
-            $stmt->execute(array(":id" => $id));
+            $stmt->execute(array(":id" => $id, ":user_id" => $this->_user_id));
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             if(!$row){
                 return false;

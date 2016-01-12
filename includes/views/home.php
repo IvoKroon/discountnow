@@ -4,6 +4,8 @@ $discounts = new DiscountController();
 //$type = new TypeController();
 $data_newest = $discounts->showNewestDiscounts();
 $data_top4 = $discounts->showTop4Best();
+
+
 ?>
 <!--<h1 xmlns="http://www.w3.org/1999/html">Home</h1>-->
 <div class="disc_block_holder">

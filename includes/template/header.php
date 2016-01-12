@@ -21,25 +21,46 @@ $header = new HeaderController();
 <!-- Fixed navbar -->
 <div id="header">
   <div class="header_top">
-    <div class="logo">Kortingennu</div>
+    <div class="logo_containter">
+      <a href="<?= ROOT_URL ?>">
+        <img class="logo" src="<?= ROOT_URL ?>includes/template/image/logo.png">
+      </a>
+    </div>
+
     <div class="login_register">
+<!--      CHECK IF USER IS LOGGED IN -->
       <?php if(!$header->checkLoggedIn()){ ?>
         <a href="<?= ROOT_URL ?>inloggen">Login</a> / <a href="<?= ROOT_URL ?>registeren">Register</a>
       <?php }else{ ?>
-<!--        <a href="profile">--><?//= $header->getSessionData()['name']; ?><!--</a>-->
+<!--          SHOW DROPDOWN WHEN USER IS LOGGED IN NORMAL USER-->
         <div class="dropdown">
           <div class="" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <?= $header->getSessionData()['name'] ?>
+            <?= ucfirst($header->getSessionData()['name']) ?>
             <span class="caret"></span>
           </div>
+
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
-            <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
+            <!-- ADMIN NORMAL USER -->
+            <?php if(SessionController::check("user_data")['level'] == 1){ ?>
+              <!-- ADMIN USER -->
+              <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
+              <li><a href="<?= ROOT_URL ?>add_discount">add</a></li>
+              <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
+
+            <?php }else{ ?>
+              <!-- NORMAL USER -->
+              <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
+              <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
+            <?php }?>
+
           </ul>
         </div>
+
       <?php } ?>
     </div>
   </div>
+
+<!--  navigation bar-->
   <nav class="navbar">
     <div class="container">
       <div id="navbar" class="collapse navbar-collapse">
@@ -49,7 +70,7 @@ $header = new HeaderController();
           <li><a title="Types" href="<?=ROOT_URL?>type">Types</a></li>
           <li><a title="Contact" href="<?=ROOT_URL?>contact">Contact</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </nav>
 </div>

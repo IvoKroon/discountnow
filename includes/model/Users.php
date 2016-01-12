@@ -62,7 +62,8 @@ class Users extends model
                 $session = new SessionController();
                 $session->set('user_session', array(
                     "user_id" => $this->_data['id'],
-                    "name" => $this->_data['name']." ".$this->_data['lastname']
+                    "name" => $this->_data['name']." ".$this->_data['lastname'],
+                    "level" =>$this->_data['level']
                 ));
                 return true;
 //                RedirectController::to("/kortingennu/");
