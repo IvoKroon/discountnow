@@ -34,7 +34,7 @@ $data_top4 = $discounts->showTop4Best();
     <div class="col-md-3 col-xs-6 disc_block">
             <a href="detail/<?= $row['id']  ?>">
                 <div class="disc_block_content">
-                    <img  title="<?= $row['title'] ?>" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
+                    <img class="disc_img"  title="<?= $row['title'] ?>" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
                     <h4><?= $row['title']  ?></h4>
                     <p class="disc_block_description"><?= $row['description'] ?></p>
                 </div>
