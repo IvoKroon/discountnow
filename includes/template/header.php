@@ -53,8 +53,8 @@ $header = new HeaderController();
             <?php if($session_data['level'] == 1){ ?>
               <!-- ADMIN USER -->
               <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
-              <li><a href="<?= ROOT_URL ?>add_discount">add</a></li>
-              <li><a href="<?= ROOT_URL ?>company_profile"><?= $company_data['name'] ?></a></li>
+              <li><a href="<?= ROOT_URL ?>add_discount">Add</a></li>
+              <li><a href="<?= ROOT_URL ?>company_profile"><?= ucfirst($company_data['name']) ?></a></li>
               <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
 
             <?php }else{ ?>

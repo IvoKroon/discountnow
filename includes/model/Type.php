@@ -41,6 +41,17 @@ class Type extends Model
         return $return_data;
     }
 
+    public function get_all_titles(){
+        try {
+            $query = "SELECT id,name FROM type ORDER BY name ASC";
+            $return_data = $this->connection->query($query)->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+        return $return_data;
+
+    }
+
     public function getTitleById($id){
         try{
             $query = "SELECT * FROM type WHERE id = :id";

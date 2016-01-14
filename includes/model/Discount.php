@@ -99,17 +99,21 @@ class Discount extends Model
         return $return_data;
     }
 
-    public function addNewDiscount($title,$description,$type_id,$amount,$startdate,$enddate,$points = 0,$kind = 0 ){
+    public function addNewDiscount($title,$description,$type_id,$amount,$start_date,$end_date, $kind, $points = 10, $image_id = 1 ){
         $company = new Company();
         $company_id = $company->getCompanyByUserId($this->_user_id)['id'];
 
-        $image_id = 1;
+//        $image_id = 1;
 
         try{
 
             $query = "INSERT INTO
-                      discount (title,description,typy_id,kind,image_id,points,company_id,amount,end_data,start_date)
-                      VALUES (:title,:description,:type_id,:kind,:image_id,:points,:company_id,:amount,:end_date,:start_date)";
+                      discount (
+                      title,description,type_id,kind,image_id,points,company_id,amount,end_date,start_date
+                      )
+                      VALUES (
+                      :title,:description,:type_id,:kind,:image_id,:points,:company_id,:amount,:end_date,:start_date
+                      )";
 
             $stmt = $this->connection->prepare($query);
             $stmt->bindParam(':title',$title);
@@ -119,14 +123,11 @@ class Discount extends Model
             $stmt->bindParam(':image_id',$image_id);
             $stmt->bindParam(':points',$points);
             $stmt->bindParam(':company_id',$company_id);
-            $stmt->bindParam(':company_id',$company_id);
             $stmt->bindParam(':amount',$amount);
-            $stmt->bindParam(':end_date',$enddate);
-            $stmt->bindParam(':start_date',$startdate);
+            $stmt->bindParam(':end_date',$end_date);
+            $stmt->bindParam(':start_date',$start_date);
 
-            $stmt->execute();
-
-            return ($stmt->fetch())? true: false;
+            return ($stmt->execute())? "DONE": "ERROR";
         }catch (PDOException $e){
             return $e->getMessage();
         }

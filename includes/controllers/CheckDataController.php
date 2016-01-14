@@ -19,6 +19,13 @@ class CheckDataController
         return is_bool($bool);
     }
 
+    public static function checkDate($date, $format = 'Y-m-d')
+    {
+        $d = DateTime::createFromFormat($format, $date);
+        return $d && $d->format($format) == $date;
+    }
+
+
     public static function checkArrayData($array){
         foreach($array as $key => $row ){
             if(empty($row)){
