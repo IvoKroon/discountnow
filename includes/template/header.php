@@ -17,11 +17,11 @@ $header = new HeaderController();
 <!--  Load bootstrap css-->
   <link rel="stylesheet" href="<?= ROOT_URL ?>includes/template/bootstrap/css/bootstrap.min.css">
 <!--  Load font-->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='<?= ROOT_URL ?>includes/template/stylesheet/font/font.css' rel='stylesheet' type='text/css'>
 <!--  Load main stylesheet-->
   <link href="<?= ROOT_URL ?>includes/template/stylesheet/stylesheet_main.css" rel="stylesheet" type="text/css" />
 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="<?= ROOT_URL?>includes/template/javascript/jquery-ui/jquery-ui.min.css">
 
 </head>
 <body>
@@ -53,8 +53,9 @@ $header = new HeaderController();
             <?php if($session_data['level'] == 1){ ?>
               <!-- ADMIN USER -->
               <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
-              <li><a href="<?= ROOT_URL ?>add_discount">Add</a></li>
+              <li><a href="<?= ROOT_URL ?>add_discount">Toevoegen</a></li>
               <li><a href="<?= ROOT_URL ?>company_profile"><?= ucfirst($company_data['name']) ?></a></li>
+              <li><a href="<?= ROOT_URL ?>my_discount">Mijn kortingen</a></li>
               <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
 
             <?php }else{ ?>

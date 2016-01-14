@@ -101,6 +101,27 @@ class Discount extends Model
         return $return_data;
     }
 
+    public function getDiscountAsAdmin(){
+        //get the user id of the user.
+        $session = SessionController::get("user_session");
+        $user_id = $session['user_id'];
+        try{
+            $query = "SELECT d.title, d.description, d.image_id, d.start_date, d.end_date
+                      FROM discount d
+                      JOIN company c
+                      WHERE d.company_id = c.id
+                      AND c.user_id = :user_id";
+
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":user_id"=>$user_id));
+            $result = $stmt->fetchAll();
+            return $result;
+
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
+
     public function addNewDiscount($title,$description,$type_id,$amount,$start_date,$end_date, $kind, $points = 10, $image_id = 1 ){
         $company = new Company();
         $company_id = $company->getCompanyByUserId($this->_user_id)['id'];

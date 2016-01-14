@@ -17,7 +17,7 @@ $data_top4 = $discounts->showTop4Best();
             <a href="detail/<?= $row['id']  ?>">
                 <div class="disc_block_content">
                     <img class="disc_img" title="<?= $row['title'] ?>" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
-                    <h4><?= $row['title']  ?></h4>
+                    <h4><?= ucfirst($row['title']) ?></h4>
                     <p class="disc_block_description"><?= $row['description'] ?></p>
                 </div>
             </a>
@@ -35,7 +35,7 @@ $data_top4 = $discounts->showTop4Best();
             <a href="detail/<?= $row['id']  ?>">
                 <div class="disc_block_content">
                     <img class="disc_img"  title="<?= $row['title'] ?>" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
-                    <h4><?= $row['title']  ?></h4>
+                    <h4><?= ucfirst($row['title'])  ?></h4>
                     <p class="disc_block_description"><?= $row['description'] ?></p>
                 </div>
             </a>

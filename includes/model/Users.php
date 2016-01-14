@@ -60,11 +60,12 @@ class Users extends model
             if(Encryption::checkPassword($this->_password, $this->_hash)){
                 //set the data in a session.
                 $session = new SessionController();
-                $session->set('user_session', array(
-                    "user_id" => $this->_data['id'],
-                    "name" => $this->_data['name']." ".$this->_data['lastname'],
-                    "level" =>$this->_data['level']
-                ));
+                    $session->set('user_session', array(
+                        "user_id" => $this->_data['id'],
+                        "name" => $this->_data['name'] . " " . $this->_data['lastname'],
+                        "level" => $this->_data['level']
+                    ));
+
                 $session->set("level",$this->_data['level']);
                 return true;
 //                RedirectController::to("/kortingennu/");
