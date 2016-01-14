@@ -329,6 +329,10 @@ nav #container{
     margin: 0 0 10px 0;
     /*margin-bottom: 10px;*/
 }
+/*CALENDER FIX*/
+.input-group .form-control{
+    z-index: 0;
+}
 
 
 /*jquery actions*/

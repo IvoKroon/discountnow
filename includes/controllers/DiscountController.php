@@ -30,8 +30,6 @@ class DiscountController {
     public function addDiscount()
     {
         if (isset($_POST['submit'])) {
-            $title = $_POST['start_date'];
-            $date = date("d/m/Y");
             if (isset($_POST['title']) &&
                 isset($_POST['description']) &&
                 isset($_POST['type_id']) &&
@@ -53,7 +51,7 @@ class DiscountController {
                 $discount = new Discount();
                 return $discount->addNewDiscount($name, $description, $type_id, $amount, $start_date, $end_date, $kind);
             } else {
-                return "Error";
+                return false;
             }
         }
     }

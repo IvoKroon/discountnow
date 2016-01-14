@@ -52,7 +52,8 @@ class Discount extends Model
     public function getFourNewestDiscounts(){
         try {
             //select the first 4 dates
-            $query = "SELECT *, MAX(start_date)  FROM discount GROUP BY id LIMIT 4;";
+            $query = "SELECT * FROM discount WHERE CURDATE() >= start_date AND CURDATE() <= end_date  ORDER BY start_date DESC, id DESC   LIMIT 4 ;
+";
             $stmt = $this->connection->query($query);
             $return_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }catch (PDOException $e){
@@ -64,7 +65,8 @@ class Discount extends Model
     public function getAllNewestDiscounts(){
         try {
             //select the first 4 dates
-            $query = "SELECT *, MAX(start_date)  FROM discount GROUP BY id LIMIT 20;";
+            $query = "SELECT * FROM discount WHERE CURDATE() >= start_date AND CURDATE() <= end_date  ORDER BY start_date DESC , id DESC LIMIT 20 ;
+";
             $stmt = $this->connection->query($query);
             $return_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }catch (PDOException $e){
@@ -127,7 +129,7 @@ class Discount extends Model
             $stmt->bindParam(':end_date',$end_date);
             $stmt->bindParam(':start_date',$start_date);
 
-            return ($stmt->execute())? "DONE": "ERROR";
+            return ($stmt->execute())? true: false;
         }catch (PDOException $e){
             return $e->getMessage();
         }
