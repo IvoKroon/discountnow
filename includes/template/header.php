@@ -35,12 +35,13 @@ $header = new HeaderController();
     </div>
 
     <div class="login_register">
+      <div class="login_container">
 <!--      CHECK IF USER IS LOGGED IN -->
       <?php if(!$header->checkLoggedIn()){ ?>
-        <a href="<?= ROOT_URL ?>inloggen">Login</a> / <a href="<?= ROOT_URL ?>registeren">Register</a>
+        <a href="<?= ROOT_URL ?>inloggen">Login</a>  <a href="<?= ROOT_URL ?>registeren">Register</a>
       <?php }else{ ?>
 <!--          SHOW DROPDOWN WHEN USER IS LOGGED IN NORMAL USER-->
-        <div class="dropdown">
+        <div class="dropdown user_menu">
           <div class="" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <?= ucfirst($session_data['name']) ?>
             <span class="caret"></span>
@@ -67,6 +68,7 @@ $header = new HeaderController();
 
       <?php } ?>
     </div>
+    </div>
   </div>
 
 <!--  navigation bar-->
@@ -83,4 +85,11 @@ $header = new HeaderController();
     </div>
   </nav>
 </div>
+<!-- SEARCH BAR -->
+<div class="search_holder">
+  <div class="search_bar_container">
+    <input type="text" class="text_fields" placeholder="Zoeken..." title="Search for:" /></label><button class="search_button" >Zoeken</button>
+  </div>
+</div>
+
 <div id="container" class="container-fluid">

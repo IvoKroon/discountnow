@@ -4,21 +4,20 @@ $all_types = $types->getAllTypes();
 
 ?>
 <h1>Types</h1>
-
-<div class="typeContent">
+<div class="type_content">
     <?php foreach($all_types as $types): ?>
-        <a href="category/<?= $types['id'] ?>">
-            <div id="row ">
-                <div class="col-md-2 rowTypes">
-                    <img class="imgType" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
+            <a href="category/<?= $types['id'] ?>">
+                <div class="row type_row">
+                    <div class="col-xs-1 rowTypes">
+                        <img class="imgType" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
+                    </div>
+                    <div class="col-xs-11 rowTypes">
+                            <div class="contentTypes">
+                               <h3><?= $types['name'] ?> <span class="badge"> 4 </span></h3>
+
+                            </div>
+                    </div>
                 </div>
-                <div class="col-md-10 rowTypes">
-                        <div class="contentTypes">
-                           <p><?= $types['name'] ?></p>
-                        </div>
-                </div>
-            </div>
-        </a>
+            </a>
     <?php endforeach;?>
 </div>
-
