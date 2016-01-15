@@ -106,11 +106,12 @@ class Discount extends Model
         $session = SessionController::get("user_session");
         $user_id = $session['user_id'];
         try{
-            $query = "SELECT d.title, d.description, d.image_id, d.start_date, d.end_date
+            $query = "SELECT d.id, d.title, d.description, d.image_id, d.start_date, d.end_date
                       FROM discount d
                       JOIN company c
                       WHERE d.company_id = c.id
-                      AND c.user_id = :user_id";
+                      AND c.user_id = 13
+                      ORDER BY d.start_date";
 
             $stmt = $this->connection->prepare($query);
             $stmt->execute(array(":user_id"=>$user_id));

@@ -315,6 +315,15 @@ nav #container{
 .contentTypes>.badge{
     float:right;
 }
+
+.contentTypes h3{
+    display: inline-block;
+}
+
+.contentTypes .get_state{
+    display: inline-block;
+}
+
 .imgType{
     padding: 0;
     margin: 0;

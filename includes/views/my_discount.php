@@ -13,7 +13,7 @@ $disc = new MyDiscountController();
 
 <div class="type_content">
     <?php foreach($all_discount as $discount): ?>
-        <a href="category/<?= $discount['id'] ?>">
+        <a href="admin_detail/<?= $discount['id'] ?>">
             <div class="row type_row">
                 <div class="col-xs-1 rowTypes">
                     <img class="imgType" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
@@ -21,7 +21,7 @@ $disc = new MyDiscountController();
                 <div class="col-xs-11 rowTypes">
                     <div class="contentTypes">
                         <h3><?= $discount['title'] ?> </h3>
-                        <div><?= $disc->getStatus($discount['start_date'],$discount['end_date']) ?></div>
+                        <div class="get_state"><?= $disc->getStatus($discount['start_date'],$discount['end_date']) ?></div>
                     </div>
                 </div>
             </div>
