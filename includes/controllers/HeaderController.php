@@ -15,6 +15,24 @@ class HeaderController
         return (isset($_GET['page'])) ? ucfirst($_GET['page']) : "Homepage";
     }
 
+    public function setActive(){
+        if(isset($_GET['page'])){
+            if($_GET['page'] == "company"){
+                return "company";
+            }else if($_GET['page'] == "type"){
+                return "type";
+            }else if($_GET['page'] == "contact"){
+                return "contact";
+            }else if($_GET['page'] == "saved"){
+                return "saved";
+            }else if($_GET['page'] == "profile"){
+                return "profile";
+            }
+        }else{
+            return "hompage";
+        }
+    }
+
     public function checkLoggedIn(){
         return SessionController::check("user_session");
     }

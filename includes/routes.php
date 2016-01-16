@@ -6,7 +6,10 @@ class Router{
     public function __construct()
     {
         $this->_route = (isset($_GET['page']))?$_GET['page'] : null ;
+//        if(isset())
+
         $this->renderPage();
+
 
     }
 

@@ -34,6 +34,21 @@ class Users extends model
         return "Email already in use!";
     }
 
+    public function getUserByUserId(){
+        $session = SessionController::get("user_session");
+        $user_id = $session['user_id'];
+
+        try{
+            $query = "SELECT * FROM users WHERE id = :user_id";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":user_id"=>$user_id));
+            $result = $stmt->fetch();
+            return $result;
+        }catch(PDOException $e){
+            return $e->getMessage();
+        }
+    }
+
     public function find_by_email($user){
             if($user) {
                 $query = "SELECT * FROM users WHERE  email = :field_data";

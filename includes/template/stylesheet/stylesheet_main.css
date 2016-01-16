@@ -15,8 +15,8 @@ html,body{
 html{
     min-height: 100%;
     position: relative;
-    overflow: -moz-scrollbars-vertical;
-    overflow: scroll;
+    overflow-y: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 
 }
 
@@ -142,6 +142,11 @@ nav #container{
     background: black;
 }
 
+.nav > .active > a{
+    color: black;
+    background:#EEEEEE;
+}
+
 .user_menu{
     cursor: pointer;
 }
@@ -174,13 +179,34 @@ nav #container{
     background: #444;
     margin-left: auto;
     margin-right: auto;
+}
+/*Nav bar 2*/
+.admin_nav_holder{
+    text-align: center;
+}
 
-    /*-webkit-border-bottom-right-radius: 10px;*/
-    /*-webkit-border-bottom-left-radius: 10px;*/
-    /*-moz-border-radius-bottomright: 10px;*/
-    /*-moz-border-radius-bottomleft: 10px;*/
-    /*border-bottom-right-radius: 10px;*/
-    /*border-bottom-left-radius: 10px;*/
+.admin_nav_container {
+    padding: 8px;
+    width: 100%;
+    background: #444;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.admin_nav_container > .admin_nav > li{
+    display: inline-block;
+    cursor: pointer;
+
+    /*padding: 10px;*/
+}
+
+.admin_nav_container > .admin_nav > li > a:hover{
+    background: #EEEEEE;
+}
+
+.admin_nav_container > .admin_nav > li > a{
+    padding: 10px;
+    font-size: 20px;
 }
 
 #container{

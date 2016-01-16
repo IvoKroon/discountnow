@@ -69,7 +69,20 @@ class Company extends Model
         }catch (PDOException $e){
             return $e->getMessage();
         }
+    }
 
+    public function updateCompany($name,$type,$c_id){
+        try{
+            $query = "UPDATE company SET name = :name, type_id = :type WHERE id = :id";
+            $stmt = $this->connection->prepare($query);
+            if($stmt->execute(array(":name"=>$name,":type"=>$type,":id"=>$c_id))){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            return $e;
+        }
     }
 
 

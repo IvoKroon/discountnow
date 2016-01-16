@@ -77,15 +77,24 @@ $header = new HeaderController();
     <div class="container">
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a title="Homepage" href="<?= HOME_LINK ?>">Alle producten</a></li>
-          <li><a title="Bedrijven" href="<?=ROOT_URL?>company">Bedrijven</a></li>
-          <li><a title="Types" href="<?=ROOT_URL?>type">Types</a></li>
-          <li><a title="Contact" href="<?=ROOT_URL?>contact">Contact</a></li>
+          <li class="<?= ($header->setActive() == "hompage")?"active":""; ?>"><a title="Homepage" href="<?= HOME_LINK ?>">Alle producten</a></li>
+          <li class="<?= ($header->setActive() == "company")?"active":""; ?>"><a title="Bedrijven" href="<?=ROOT_URL?>company">Bedrijven</a></li>
+          <li class="<?= ($header->setActive() == "type")?"active":""; ?>"><a title="Types" href="<?=ROOT_URL?>type">Types</a></li>
+          <li class="<?= ($header->setActive() == "contact")?"active":""; ?>"><a title="Contact" href="<?=ROOT_URL?>contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 </div>
+
+<!--<div class="admin_nav_holder">-->
+<!--  <div class="admin_nav_container">-->
+<!--    <ul class="admin_nav">-->
+<!--      <li><a class="--><?//= ($header->setActive() == "saved")?"active":""; ?><!--">Opgeslagen</a></li>-->
+<!--      <li><a class="--><?//= ($header->setActive() == "saved")?"active":""; ?><!--">Profiel</a></li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</div>-->
 <!-- SEARCH BAR -->
 <div class="search_holder">
   <div class="search_bar_container">
