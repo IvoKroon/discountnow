@@ -1,10 +1,15 @@
 <?php
 class UsersController{
 
+    private $_user_model;
+
+    public function __construct()
+    {
+        $this->_user_model = new Users();
+    }
 
     public function login($email, $password){
-        $user = new Users();
-        return $user->login($email,$password);
+        return $this->_user_model->login($email,$password);
     }
 
     public function checkLoggedIn(){
@@ -25,7 +30,15 @@ class UsersController{
         }
     }
 
+    public function setNewPassword(){
+        if(isset($_POST['old_pass']) && isset($_POST['new_pass']) && isset($_POST['new_pass_check'])){
+            $old_pass = $_POST['old_pass'];
+            $new_pass = $_POST['new_pass'];
+            $new_pass_check = $_POST['new_pass_check'];
 
+            return $this->_user_model->newPassword($old_pass,$new_pass,$new_pass_check);
+        }
+    }
 
     public function register(){
         //check if data in post if filled
@@ -45,17 +58,19 @@ class UsersController{
                         if(CheckDataController::checkNumeric($age)){
                                 if($pass == $pass_check) {
                                     $pass = Encryption::setPassword($pass);
-                                    $user = new Users();
-                                    return "data : email = $email ".$user->set($email,$first_name,$last_name,$pass,$gender);
+//                                    $user = new Users();
+                                    return $this->_user_model->set($email,$first_name,$last_name,$pass,$gender);
+                                }else{
+                                    return "Wachtwoorden moeten wel hetzelfde zijn.";
                                 }
                         }
                     }
                 }
             }
         }else{
-            return "Something not filled in";
+            return "Er is iets niet ingevuld.";
         }
-        return "Some Error";
+        return "Er is iets fout gegaan";
     }
 
     public function logout(){

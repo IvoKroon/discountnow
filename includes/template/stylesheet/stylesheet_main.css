@@ -20,6 +20,17 @@ html{
 
 }
 
+.regis_form{
+    width: 600px;
+}
+
+.red_text{
+    color: red;
+}
+.green_text{
+    color: green;
+}
+
 .text_fields{
     padding: 0;
     padding-left: 8px;
@@ -282,6 +293,13 @@ nav #container{
 
 /*homepage*/
 .title_top{
+    padding: 0 0 10px 0;
+    margin: 0px;
+    display: inline-block;
+}
+
+.title_top_center{
+    width: 100%;
     padding: 0 0 10px 0;
     margin: 0px;
     display: inline-block;

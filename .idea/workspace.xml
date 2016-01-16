@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef47aaa-2c77-41b1-b53c-4db00e5e51d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/views/profile.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/views/profiel.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/views/succes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/views/update_password.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/includes/controllers/CompanyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/HeaderController.php" afterPath="$PROJECT_DIR$/includes/controllers/HeaderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/model/Company.php" afterPath="$PROJECT_DIR$/includes/model/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/UsersController.php" afterPath="$PROJECT_DIR$/includes/controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/model/Users.php" afterPath="$PROJECT_DIR$/includes/model/Users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/routes.php" afterPath="$PROJECT_DIR$/includes/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/template/header.php" afterPath="$PROJECT_DIR$/includes/template/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css" afterPath="$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/views/company_profile.php" afterPath="$PROJECT_DIR$/includes/views/company_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/views/saved.php" afterPath="$PROJECT_DIR$/includes/views/saved.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/views/registeren.php" afterPath="$PROJECT_DIR$/includes/views/registeren.php" />
     </list>
     <ignored path="discountnow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,60 +30,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="company_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/views/company_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.958333">
-              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/controllers/CompanyController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.2083335">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registeren.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registeren.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/views/registeren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.708333">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="72" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/model/Company.php">
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/model/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8333333">
-              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="74" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.29503918">
+              <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
               <folding>
-                <marker date="1452870779000" expanded="true" signature="219:519" placeholder="SELECT compa..company..." />
-                <marker date="1452870779000" expanded="true" signature="826:870" placeholder="SELECT COUNT..company..." />
-                <marker date="1452870779000" expanded="true" signature="1292:1328" placeholder="SELECT * FRO..company..." />
-                <marker date="1452870779000" expanded="true" signature="1720:1758" placeholder="SELECT * FRO..company..." />
-                <marker date="1452870779000" expanded="true" signature="1720:1761" placeholder="SELECT * FRO..company..." />
-                <marker date="1452870779000" expanded="true" signature="2122:2170" placeholder="UPDATE compa..." />
-                <marker date="1452870779000" expanded="true" signature="2122:2177" placeholder="UPDATE compa..." />
-                <marker date="1452870779000" expanded="true" signature="2122:2185" placeholder="UPDATE compa..." />
+                <marker date="1452984950000" expanded="true" signature="393:561" placeholder="INSERT INTO `users`..." />
+                <marker date="1452984950000" expanded="true" signature="1598:1637" placeholder="SELECT * FRO..users..." />
+                <marker date="1452984950000" expanded="true" signature="1998:2044" placeholder="SELECT * FRO..users..." />
+                <marker date="1452984950000" expanded="true" signature="3333:3374" placeholder="SELECT passw..users..." />
+                <marker date="1452984950000" expanded="true" signature="3870:3903" placeholder="UPDATE users..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saved.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/views/saved.php">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="38" column="88" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheet_main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -111,9 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/views/company_detail.php" />
-        <option value="$PROJECT_DIR$/includes/controllers/Company_detailController.php" />
-        <option value="$PROJECT_DIR$/includes/views/category.php" />
         <option value="$PROJECT_DIR$/includes/views/inloggen.php" />
         <option value="$PROJECT_DIR$/includes/views/uitloggen.php" />
         <option value="$PROJECT_DIR$/includes/controllers/RedirectController.php" />
@@ -129,7 +117,6 @@
         <option value="$PROJECT_DIR$/includes/settings.php" />
         <option value="$PROJECT_DIR$/includes/model/Model.php" />
         <option value="$PROJECT_DIR$/includes/model/DiscountSaved.php" />
-        <option value="$PROJECT_DIR$/includes/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/includes/template/footer.php" />
         <option value="$PROJECT_DIR$/includes/template/javascript/ajax.js" />
         <option value="$PROJECT_DIR$/includes/views/company.php" />
@@ -150,18 +137,22 @@
         <option value="$PROJECT_DIR$/includes/views/image_upload.php" />
         <option value="$PROJECT_DIR$/includes/controllers/ImageUploadController.php" />
         <option value="$PROJECT_DIR$/includes/views/profiel.php" />
-        <option value="$PROJECT_DIR$/includes/model/Users.php" />
         <option value="$PROJECT_DIR$/includes/views/profile.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/includes/routes.php" />
         <option value="$PROJECT_DIR$/includes/controllers/HeaderController.php" />
-        <option value="$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css" />
         <option value="$PROJECT_DIR$/includes/template/header.php" />
         <option value="$PROJECT_DIR$/includes/views/type.php" />
-        <option value="$PROJECT_DIR$/includes/views/saved.php" />
         <option value="$PROJECT_DIR$/includes/model/Company.php" />
         <option value="$PROJECT_DIR$/includes/controllers/CompanyController.php" />
         <option value="$PROJECT_DIR$/includes/views/company_profile.php" />
+        <option value="$PROJECT_DIR$/includes/views/saved.php" />
+        <option value="$PROJECT_DIR$/includes/views/succes.php" />
+        <option value="$PROJECT_DIR$/includes/views/registeren.php" />
+        <option value="$PROJECT_DIR$/includes/controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/includes/model/Users.php" />
+        <option value="$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css" />
+        <option value="$PROJECT_DIR$/includes/views/update_password.php" />
       </list>
     </option>
   </component>
@@ -416,7 +407,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2907916" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2907916" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -454,46 +445,12 @@
           <line>31</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/model/Users.php</url>
-          <line>38</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/model/Users.php</url>
-          <line>37</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/controllers/CompanyController.php</url>
-          <line>22</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/controllers/CompanyController.php</url>
-          <line>23</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/bootstrap/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/JsonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/ajax/ajaxHeader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022058824">
@@ -505,14 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.066176474">
           <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,14 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4237726">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/model/Type.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5813953">
@@ -643,14 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/SessionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -691,14 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.5">
           <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -791,26 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/model/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.291667">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <marker date="1452866010000" expanded="true" signature="392:560" placeholder="INSERT INTO `users`..." />
-            <marker date="1452866010000" expanded="true" signature="1261:1300" placeholder="SELECT * FRO..users..." />
-            <marker date="1452866010000" expanded="true" signature="1661:1707" placeholder="SELECT * FRO..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.235294">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/template/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.4509804">
@@ -870,10 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/views/profile.php">
+    <entry file="file://$PROJECT_DIR$/includes/model/Db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27415144">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -886,10 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/model/Db.php">
+    <entry file="file://$PROJECT_DIR$/includes/controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.45169714">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -913,25 +818,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/views/company_profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.958333">
+        <state vertical-scroll-proportion="0.6866841">
           <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/CompanyController.php">
+    <entry file="file://$PROJECT_DIR$/includes/controllers/SessionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2083335">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/succes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27415144">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/views/registeren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.708333">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="72" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="38" column="88" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/update_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6475196">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/model/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29503918">
+          <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
+          <folding>
+            <marker date="1452984950000" expanded="true" signature="393:561" placeholder="INSERT INTO `users`..." />
+            <marker date="1452984950000" expanded="true" signature="1598:1637" placeholder="SELECT * FRO..users..." />
+            <marker date="1452984950000" expanded="true" signature="1998:2044" placeholder="SELECT * FRO..users..." />
+            <marker date="1452984950000" expanded="true" signature="3333:3374" placeholder="SELECT passw..users..." />
+            <marker date="1452984950000" expanded="true" signature="3870:3903" placeholder="UPDATE users..." />
+          </folding>
         </state>
       </provider>
     </entry>
