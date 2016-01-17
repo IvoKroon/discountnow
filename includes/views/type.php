@@ -8,9 +8,9 @@ $all_types = $types->all();
     <?php foreach($all_types as $type): ?>
             <a href="category/<?= $type['id'] ?>">
                 <div class="row type_row">
-                    <div class="col-xs-1 rowTypes">
-                        <img class="imgType" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
-                    </div>
+<!--                    <div class="rowTypes">-->
+                        <img class="col-xs-1 imgType" src="<?= ROOT_URL ?>includes/views/images/tree_dummy.jpg">
+<!--                    </div>-->
                     <div class="col-xs-11 rowTypes">
                             <div class="contentTypes">
                                <h3><?= $type['name'] ?> <span class="badge"> <?= $type['amount_discount'] ?> </span></h3>

@@ -13,10 +13,23 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
+<h1 class="title_top_center text-center">Inloggen</h1>
 
-<h1>Inloggen</h1>
-<form method="post">
-    <input type="text" name="email" placeholder="email">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit" name="submit" value="Inloggen">
+<form method="post" class="form-horizontal regis_form center-block">
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+            <input class="form-control" type="text" name="email" placeholder="email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-9">
+            <input class="form-control" type="password" name="password" placeholder="password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9"><input type="submit" name="submit" value="Inloggen"></div>
+    </div>
 </form>

@@ -123,7 +123,7 @@ class Discount extends Model
         }
     }
 
-    public function addNewDiscount($title,$description,$type_id,$amount,$start_date,$end_date, $kind, $points = 10, $image_id = 1 ){
+    public function addNewDiscount($title,$description,$type_id,$amount,$start_date,$end_date, $kind, $code, $style, $points = 10, $image_id = 1 ){
         $company = new Company();
         $company_id = $company->getCompanyByUserId($this->_user_id)['id'];
 
@@ -133,10 +133,10 @@ class Discount extends Model
 
             $query = "INSERT INTO
                       discount (
-                      title,description,type_id,kind,image_id,points,company_id,amount,end_date,start_date
+                      title,description,type_id,kind,image_id,points,company_id,amount,end_date,start_date,code,style
                       )
                       VALUES (
-                      :title,:description,:type_id,:kind,:image_id,:points,:company_id,:amount,:end_date,:start_date
+                      :title,:description,:type_id,:kind,:image_id,:points,:company_id,:amount,:end_date,:start_date,:code,:style
                       )";
 
             $stmt = $this->connection->prepare($query);
@@ -150,6 +150,8 @@ class Discount extends Model
             $stmt->bindParam(':amount',$amount);
             $stmt->bindParam(':end_date',$end_date);
             $stmt->bindParam(':start_date',$start_date);
+            $stmt->bindParam(':code',$code);
+            $stmt->bindParam(':style',$style);
 
             return ($stmt->execute())? true: false;
         }catch (PDOException $e){

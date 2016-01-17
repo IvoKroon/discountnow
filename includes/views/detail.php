@@ -11,3 +11,6 @@ $data = $detailController->showDetailData();
 <?php }else{ ?>
     <button value="<?= $data['data']['id'] ?>" data-discountid="<?= $data['data']['id'] ?>" class="save_button_disc">Opslaan</button>
 <?php }
+?>
+
+<button>Gebruiken</button>
