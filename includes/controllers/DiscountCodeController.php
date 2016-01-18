@@ -12,6 +12,11 @@ class DiscountCodeController
     public function addNewRandomCode($id)
     {
 //        return $id;
-        return $this->_discount_code->makeNewDiscountCode($id);
+
+        if(SessionController::check("user_session")){
+            return $this->_discount_code->makeNewDiscountCode($id);
+        }else{
+            return 2;
+        }
     }
 }

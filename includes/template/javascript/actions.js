@@ -26,19 +26,6 @@ $(".save_button_disc").on("click", function(){
     }
 });
 
-//USER DISCOUNT AJAX
-$(".use_discount").click(function (){
-    console.log($(".discount_used").val() );
-    if($(".discount_used").val() == 2) {
-        var d_id = $(".d_id").val();
-        console.log(d_id);
-        doAjax(ROOT_URL + "ajax/save_discount_ajax.php", "POST", {data: "discount_code", dId: d_id});
-        $(".use_discount").removeClass();
-        $(".discount_used").val(1);
-    }
-
-});
-
 function doAjax(link, kind, dataArray) {
     var request = $.ajax({
         method: kind,
@@ -48,11 +35,54 @@ function doAjax(link, kind, dataArray) {
     });
 
     request.done(function (msg) {
-        console.log(msg);
+        var data = jQuery.parseJSON(msg);
+        //console.log(msg);
+        if(data.Message == 2){
+            window.location.href = ROOT_URL+"inloggen";
+        }
     });
 
     request.fail(function (jqXHR, textStatus) {
         console.log(textStatus);
+    });
+}
+
+
+//USER DISCOUNT AJAX
+$(".use_discount").click(function (){
+    //console.log($(".discount_used").val() );
+    if($(".discount_used").val() == 1) {
+        var d_id = $(".d_id").val();
+        //console.log(d_id);
+        doAjaxByUseDiscount(ROOT_URL + "ajax/save_discount_ajax.php", "POST", {data: "discount_code", dId: d_id});
+    }
+
+});
+
+function doAjaxByUseDiscount(link, kind, dataArray) {
+    var request = $.ajax({
+        method: kind,
+        url: link,
+        data: dataArray,
+        //dataType: "json"
+    });
+
+    request.done(function (msg) {
+        var data = jQuery.parseJSON(msg);
+        //console.log(msg);
+        if(data.Message == 2){
+            window.location.href = ROOT_URL+"inloggen";
+        }else{
+            if(data.Message != false) {
+                $(".code_field").html(data.Message);
+                $(".use_discount").removeClass();
+                $(".discount_used").val(1);
+            }
+        }
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        return textStatus;
     });
 }
 

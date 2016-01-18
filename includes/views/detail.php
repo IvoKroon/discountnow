@@ -11,8 +11,8 @@ $image_data = $image->loadImage($data['data']['image_id']);
 $discount_code = $discountCodes->getCodeByUserId($data['data']['id']);
 ?>
 <input type="hidden" class="d_id" value="<?= $data['data']['id'] ?>">
-<input type="hidden" class="discount_used" value="<?= $discount_code? 1 : 2 ?>">
-<div cslass="row detail_data">
+<input type="hidden" class="discount_used" value="<?= $data['data']['style'] ?>">
+<div class="row detail_data">
     <div class="col-md-8">
         <img class="detail_image" src="<?= ROOT_URL ?>includes/views/images/<?= $image_data['image'] ?>" title="<?= $image_data['title'] ?>">
     </div>
@@ -68,7 +68,7 @@ $discount_code = $discountCodes->getCodeByUserId($data['data']['id']);
                     <?php
                         }else{
                             ?>
-                            Code : <p class="code_field"></p>
+                            Code : <p class="code_field">taddaa</p>
 <!--                            Code : <p class="code_field">--><?//= $discount_code_controller->addNewRandomCode() ?><!--</p>-->
                     <?php
 
@@ -82,4 +82,6 @@ $discount_code = $discountCodes->getCodeByUserId($data['data']['id']);
             </div>
         </div>
     </div>
+</div>
+
 </div>
