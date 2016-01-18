@@ -26,6 +26,19 @@ $(".save_button_disc").on("click", function(){
     }
 });
 
+//USER DISCOUNT AJAX
+$(".use_discount").click(function (){
+    console.log($(".discount_used").val() );
+    if($(".discount_used").val() == 2) {
+        var d_id = $(".d_id").val();
+        console.log(d_id);
+        doAjax(ROOT_URL + "ajax/save_discount_ajax.php", "POST", {data: "discount_code", dId: d_id});
+        $(".use_discount").removeClass();
+        $(".discount_used").val(1);
+    }
+
+});
+
 function doAjax(link, kind, dataArray) {
     var request = $.ajax({
         method: kind,
@@ -120,3 +133,10 @@ function checkAndAddAfterClass(check_class,add_html,after_class){
         $(add_html).insertBefore(after_class)
     }
 }
+
+
+//MODALS
+
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+})

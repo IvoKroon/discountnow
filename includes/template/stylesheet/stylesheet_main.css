@@ -236,7 +236,37 @@ nav #container{
     background-color: #f5f5f5;
 }
 
+/*DETAIL PAGE*/
+.detail_data{
+    margin-top: 20px;
+}
+.detail_data h1{
+    height: 75px;
+    text-overflow: clip;
+    overflow: hidden;
 
+}
+.detail_image{
+    width: 100%;
+}
+.save_button_disc{
+    text-align: center;
+}
+.button_use{
+    text-align: center;
+}
+.extra_data{
+    padding-top: 50px;
+}
+
+.detail_data button{
+    margin-bottom: 10px;
+}
+
+.code_field{
+    font-style: italic;
+    font-size: 20px;
+}
 /* design blocks */
 
 .disc_block_holder{

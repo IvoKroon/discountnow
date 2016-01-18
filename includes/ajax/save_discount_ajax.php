@@ -2,7 +2,8 @@
 session_start();
 $session = new SessionController();
 $userId = $session->get("user_session")['user_id'];
-print_r($userId);
+//echo JsonController::jsonMessage("Hello");
+//print_r($userId);
 if(isset($_POST['data'])) {
 
 
@@ -31,6 +32,18 @@ if(isset($_POST['data'])) {
             }else{
                 JsonController::jsonMessage("Error no id found");
             }
+        break;
+
+        case "discount_code":
+
+//            echo JsonController::jsonMessage("hello");
+            if(isset($_POST['dId'])){
+                $discount_code = new DiscountCodeController();
+                echo JsonController::jsonMessage($discount_code->addNewRandomCode($_POST['dId']));
+            }else{
+                echo JsonController::jsonMessage("Error no id found");
+            }
+        break;
 
     }
 
