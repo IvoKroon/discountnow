@@ -76,4 +76,18 @@ class UsersController{
     public function logout(){
         SessionController::delete("user_session");
     }
+
+    public function updateUserProfile(){
+        if(isset($_POST['submit'])){
+            $name = htmlentities($_POST['name']);
+            $lastname = htmlentities($_POST['lastname']);
+            $email = htmlentities($_POST['email']);
+
+            if($this->_user_model->updateUser($name,$lastname,$email)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
 }

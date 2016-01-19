@@ -2,10 +2,13 @@
 ob_start();
 session_start();
 //require_once(__DIR__."/../controllers/HeaderController.php");
-$session_data = SessionController::get("user_session");
-if($session_data['level'] == 1){
-  $company = new Company();
-  $company_data = $company->getCompanyByUserId();
+if(SessionController::check("user_session")) {
+  $session_data = SessionController::get("user_session");
+
+  if ($session_data['level'] == 1) {
+    $company = new Company();
+    $company_data = $company->getCompanyByUserId();
+  }
 }
 $header = new HeaderController();
 ?>
@@ -56,11 +59,13 @@ $header = new HeaderController();
               <li><a href="<?= ROOT_URL ?>add_discount">Toevoegen</a></li>
               <li><a href="<?= ROOT_URL ?>company_profile"><?= ucfirst($company_data['name']) ?></a></li>
               <li><a href="<?= ROOT_URL ?>my_discount">Mijn kortingen</a></li>
+              <li><a href="<?= ROOT_URL ?>profile">Profiel</a></li>
               <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
 
             <?php }else{ ?>
               <!-- NORMAL USER -->
               <li><a href="<?= ROOT_URL ?>saved">Opgeslagen</a></li>
+              <li><a href="<?= ROOT_URL ?>profile">Profiel</a></li>
               <li><a href="<?= ROOT_URL ?>uitloggen">Uitloggen</a></li>
             <?php }?>
 

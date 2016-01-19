@@ -19,4 +19,12 @@ class DiscountCodeController
             return 2;
         }
     }
+
+    public function checkDiscount(){
+        if(isset($_POST['code']) && isset($_POST['submit'])){
+            $code = htmlentities($_POST['code']);
+            $id = $_GET['id'];
+            return $this->_discount_code->checkCode($code,$id);
+        }
+    }
 }

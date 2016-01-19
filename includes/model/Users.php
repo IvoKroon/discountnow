@@ -6,7 +6,7 @@
  * Date: 04/12/15
  * Time: 14:32
  */
-class Users extends model
+class Users extends Model
 {
 //    private $users = [];
     private $_email, $_hash, $_password, $_data;
@@ -64,9 +64,12 @@ class Users extends model
                 $stmt->execute(array(
                     ":field_data" => $user
                 ));
-                $this->_data = $stmt->fetch();
-                if(count($this->_data)) {
+                if($stmt->rowCount() > 0){
+                    $result = $stmt->fetch();
+                    $this->_data = $result;
                     return true;
+                }else{
+                    return false;
                 }
             }
         return false;
@@ -82,17 +85,26 @@ class Users extends model
 
             if(Encryption::checkPassword($this->_password, $this->_hash)){
                 //set the data in a session.
-                    SessionController::set('user_session', array(
-                        "user_id" => $this->_data['id'],
-                        "name" => $this->_data['name'] . " " . $this->_data['lastname'],
-                        "level" => $this->_data['level']
-                    ));
+                $this->setSessionUser(
+                    $this->_data['id'],
+                    $this->_data['name'],
+                    $this->_data['lastname'],
+                    $this->_data['level']
+                );
 
                 RedirectController::to(ROOT_URL);
             }
         }
 
     return false;
+    }
+
+    private function setSessionUser($id,$name,$lastname,$level){
+        SessionController::set('user_session', array(
+            "user_id" => $id,
+            "name" =>  $name. " " . $lastname,
+            "level" => $level
+        ));
     }
 
     private function getPasswordOffUser($user_id){
@@ -143,6 +155,29 @@ class Users extends model
 
         }else{
             return "De wachtwoorden zijn niet hetzelfde.";
+        }
+    }
+
+    public function updateUser($name, $lastname ,$email){
+        $query = "UPDATE users SET name = :name, lastname = :lastname, email = :email WHERE id = :id";
+        try{
+            $stmt = $this->connection->prepare($query);
+            if($stmt->execute(
+                array(
+                    ":name"=>$name,
+                    ":lastname"=>$lastname,
+                    ":email"=>$email,
+                    ":id"=>$this->_user_id
+                ))){
+                $session = SessionController::get("user_session");
+                $this->setSessionUser($this->_user_id,$name,$lastname,$session['level']);
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e){
+            return $e->getMessage();
         }
     }
 

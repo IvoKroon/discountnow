@@ -6,7 +6,8 @@ $(function() {
     $( "#datepicker2" ).datepicker();
 });
 
-var ROOT_URL = "http://localhost/discountnow/";
+//var ROOT_URL = "http://localhost/discountnow/";
+var ROOT_URL = "http://womg.nl/kortingennu0/";
 
 $(".save_button_disc").on("click", function(){
     var button = $(this);

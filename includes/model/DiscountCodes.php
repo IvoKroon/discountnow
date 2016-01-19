@@ -53,4 +53,36 @@ class DiscountCodes extends Model{
         }
 
     }
+    public function checkUserBelongsToDiscount($discount_id){
+        $u_id = $this->_user_id;
+//        $query = "";
+//        $query = "SELECT * FROM discount_codes WHERE discount_id = :id AND users_id = :user";
+        try {
+            $stmt = $this->connection->prepare($query);
+            if($stmt->execute(array(":id"=>$discount_id, ":user"=>$u_id))){
+                return true;
+            }else{
+                return false;
+            }
+
+            }catch (PDOException $e){
+
+            }
+    }
+
+    public function checkCode($code,$discount_id){
+        $query = "SELECT * FROM discount_codes WHERE discount_id = :id AND code = :code";
+        try{
+
+            $stmt = $this->connection->prepare($query);
+            if($stmt->execute(array(":id"=>$discount_id, ":code"=>$code))){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
 }

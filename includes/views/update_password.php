@@ -32,7 +32,7 @@ $response =  $user->setNewPassword();
         ?>
 
         <div class="form-group">
-            <label class="green_text">Gelukt</label>
+            <label class="green_text">Wachtwoord aangepast</label>
         </div>
 
             <?php }else{ ?>

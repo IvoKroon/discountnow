@@ -7,7 +7,11 @@ class SessionController
     }
 
     public static function get($name){
-        return $_SESSION[$name];
+        if(self::check($name)) {
+            return $_SESSION[$name];
+        }else{
+            return false;
+        }
     }
 
     public static function set($name,$value){

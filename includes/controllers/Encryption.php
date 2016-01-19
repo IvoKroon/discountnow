@@ -1,5 +1,6 @@
 <?php
-
+//require_once(ROOT_URL."includes/plugin/password.php");
+//require_once("includes/plugin/password.php");
 class Encryption
 {
     /*

@@ -10,8 +10,8 @@ define("HOST", "localhost" );
 //define("DATABASE", "md293343db347136" );
 //define("HOST", "db.womg.nl" );
 
-//define("HOME_LINK", "http://womg.nl/kortingennu/");
-//define("ROOT_URL", "http://womg.nl/kortingennu/index.php?page=");
+//define("HOME_LINK", "http://womg.nl/kortingennu0/");
+//define("ROOT_URL", "http://womg.nl/kortingennu0/");
 
 define("HOME_LINK", "http://localhost/discountnow/");
 define("ROOT_URL", "http://localhost/discountnow/");
