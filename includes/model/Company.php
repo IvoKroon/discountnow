@@ -85,5 +85,17 @@ class Company extends Model
         }
     }
 
+    public function searchForCompany($search_text){
+        $search = "%".$search_text."%";
+        $query = "SELECT c.id,  c.name, c.image, t.name as type_name  FROM company c JOIN type t ON c.type_id = t.id  WHERE c.name LIKE :name LIMIT 8";
+
+        try{
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":name"=> $search));
+            return $stmt->fetchAll();
+        }catch (PDOException $e){
+
+        }
+    }
 
 }

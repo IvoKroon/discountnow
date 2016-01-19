@@ -1,7 +1,9 @@
 <?php
 $data = new HomeController();
 $discounts = new DiscountController();
-//$type = new TypeController();
+$saved = new DiscountSaved();
+
+$saved_data = $saved->load4SavedDiscounts();
 $data_newest = $discounts->showNewestDiscounts();
 $data_top4 = $discounts->showTop4Best();
 
@@ -25,12 +27,14 @@ $data_top4 = $discounts->showTop4Best();
     <?php endforeach ?>
 </div>
 
-
+<?php if(SessionController::check('user_session')){ ?>
+    <?php if($saved_data){ ?>
 <div class="title_container">
-    <h2 class="title_top">Top 40</h2><a class="title_link" href="">bekijk alles</a>
+    <h2 class="title_top">Opgeslagen</h2><a class="title_link" href="<?= ROOT_URL ?>saved">bekijk alles</a>
 </div>
+
 <div class="row">
-<?php foreach($data_top4 as $row):?>
+<?php foreach($saved_data as $row):?>
     <div class="col-md-3 col-xs-6 disc_block">
             <a href="detail/<?= $row['id']  ?>">
                 <div class="disc_block_content">
@@ -42,3 +46,5 @@ $data_top4 = $discounts->showTop4Best();
     </div>
 <?php endforeach ?>
 </div>
+<?php }
+}

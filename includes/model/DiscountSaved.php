@@ -75,4 +75,22 @@ class DiscountSaved extends Model
         }
     }
 
+    public function load4SavedDiscounts(){
+        $query = "SELECT discount.id,discount.title,discount.description, discount.end_date FROM discount INNER JOIN discount_saved ON discount_saved.discount_id = discount.id WHERE discount_saved.user_id = :uId LIMIT 4";
+        try{
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":uId" => $this->_user_id));
+            $result = $stmt->fetchAll();
+            if($stmt->rowCount() == 0){
+                return false;
+            }else {
+                return $result;
+            }
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+
+    }
+
+
 }

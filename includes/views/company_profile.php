@@ -32,7 +32,7 @@ $types = $type->all();
     <div class="form-group">
         <label>Bedrijfs naam</label>
         <select class="form-control" name="type">
-<!--            <option name="type" selected="true" disabled="disabled" >--><?//= $typ_data['name'] ?><!--</option>-->
+            <option name="type" selected="selected"  value="<?= $typ_data['id'] ?>" ><?= $typ_data['name'] ?></option>
             <?php foreach($types as $type): ?>
             <option name="type" value="<?= $type['id'] ?>"><?= $type['name'] ?></option>
             <?php endforeach; ?>

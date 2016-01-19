@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef47aaa-2c77-41b1-b53c-4db00e5e51d5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/controllers/SearchController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/views/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/ajax/save_discount_ajax.php" afterPath="$PROJECT_DIR$/includes/ajax/save_discount_ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/DiscountCodeController.php" afterPath="$PROJECT_DIR$/includes/controllers/DiscountCodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/template/javascript/actions.js" afterPath="$PROJECT_DIR$/includes/template/javascript/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/views/detail.php" afterPath="$PROJECT_DIR$/includes/views/detail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/includes/controllers/CompanyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/model/Company.php" afterPath="$PROJECT_DIR$/includes/model/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/model/Discount.php" afterPath="$PROJECT_DIR$/includes/model/Discount.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/model/DiscountSaved.php" afterPath="$PROJECT_DIR$/includes/model/DiscountSaved.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/template/header.php" afterPath="$PROJECT_DIR$/includes/template/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/views/company_profile.php" afterPath="$PROJECT_DIR$/includes/views/company_profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/views/home.php" afterPath="$PROJECT_DIR$/includes/views/home.php" />
     </list>
     <ignored path="discountnow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,36 +33,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/template/javascript/actions.js">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/template/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.73876405">
+              <caret line="91" column="42" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="42" />
               <folding>
-                <element signature="e#0#43#0" expanded="false" />
-                <marker date="1453144244000" expanded="true" signature="2521:2678" placeholder="..." />
-                <marker date="1453144244000" expanded="true" signature="2598:2678" placeholder="..." />
+                <marker date="1453150275000" expanded="true" signature="343:360" placeholder="..." />
+                <marker date="1453150275000" expanded="true" signature="932:963" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/views/detail.php">
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/views/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.862745">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.9583335">
+              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_discount.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/views/my_discount.php">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3524804">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="13" column="108" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="108" />
+              <folding>
+                <marker date="1453148250000" expanded="true" signature="1351:1389" placeholder="..." />
+                <marker date="1453148250000" expanded="true" signature="1449:1509" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/controllers/SearchController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Company.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/model/Company.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.708333">
+              <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+              <folding>
+                <marker date="1453190805000" expanded="true" signature="219:519" placeholder="SELECT compa..company..." />
+                <marker date="1453190805000" expanded="true" signature="826:870" placeholder="SELECT COUNT..company..." />
+                <marker date="1453190805000" expanded="true" signature="1292:1328" placeholder="SELECT * FRO..company..." />
+                <marker date="1453190805000" expanded="true" signature="1720:1758" placeholder="SELECT * FRO..company..." />
+                <marker date="1453190805000" expanded="true" signature="1720:1761" placeholder="SELECT * FRO..company..." />
+                <marker date="1453190805000" expanded="true" signature="2122:2170" placeholder="UPDATE compa..." />
+                <marker date="1453190805000" expanded="true" signature="2122:2177" placeholder="UPDATE compa..." />
+                <marker date="1453190805000" expanded="true" signature="2122:2185" placeholder="UPDATE compa..." />
+                <marker date="1453190805000" expanded="true" signature="2603:2734" placeholder="SELECT c.id,..company..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,14 +115,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/controllers/DetailController.php" />
-        <option value="$PROJECT_DIR$/includes/views/nieuwste.php" />
         <option value="$PROJECT_DIR$/includes/views/404.php" />
         <option value="$PROJECT_DIR$/includes/controllers/JsonController.php" />
         <option value="$PROJECT_DIR$/includes/ajax/ajaxHeader.php" />
         <option value="$PROJECT_DIR$/includes/settings.php" />
         <option value="$PROJECT_DIR$/includes/model/Model.php" />
-        <option value="$PROJECT_DIR$/includes/model/DiscountSaved.php" />
         <option value="$PROJECT_DIR$/includes/template/javascript/ajax.js" />
         <option value="$PROJECT_DIR$/includes/views/company.php" />
         <option value="$PROJECT_DIR$/includes/controllers/CheckDataController.php" />
@@ -93,7 +127,6 @@
         <option value="$PROJECT_DIR$/includes/controllers/functionsController.php" />
         <option value="$PROJECT_DIR$/includes/controllers/FunctionController.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/views/home.php" />
         <option value="$PROJECT_DIR$/includes/template/bootstrap/css/ui-jquery.css" />
         <option value="$PROJECT_DIR$/includes/template/stylesheet/font/font.css" />
         <option value="$PROJECT_DIR$/includes/controllers/MyDiscountController.php" />
@@ -106,10 +139,6 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/includes/routes.php" />
         <option value="$PROJECT_DIR$/includes/controllers/HeaderController.php" />
-        <option value="$PROJECT_DIR$/includes/template/header.php" />
-        <option value="$PROJECT_DIR$/includes/model/Company.php" />
-        <option value="$PROJECT_DIR$/includes/controllers/CompanyController.php" />
-        <option value="$PROJECT_DIR$/includes/views/company_profile.php" />
         <option value="$PROJECT_DIR$/includes/views/saved.php" />
         <option value="$PROJECT_DIR$/includes/views/succes.php" />
         <option value="$PROJECT_DIR$/includes/controllers/UsersController.php" />
@@ -120,7 +149,6 @@
         <option value="$PROJECT_DIR$/includes/views/registeren.php" />
         <option value="$PROJECT_DIR$/includes/template/footer.php" />
         <option value="$PROJECT_DIR$/includes/views/add_discount.php" />
-        <option value="$PROJECT_DIR$/includes/model/Discount.php" />
         <option value="$PROJECT_DIR$/includes/controllers/DiscountController.php" />
         <option value="$PROJECT_DIR$/includes/model/Image.php" />
         <option value="$PROJECT_DIR$/includes/template/stylesheet/stylesheet_main.css" />
@@ -129,6 +157,15 @@
         <option value="$PROJECT_DIR$/includes/controllers/DiscountCodeController.php" />
         <option value="$PROJECT_DIR$/includes/template/javascript/actions.js" />
         <option value="$PROJECT_DIR$/includes/views/detail.php" />
+        <option value="$PROJECT_DIR$/includes/controllers/CompanyController.php" />
+        <option value="$PROJECT_DIR$/includes/views/company_profile.php" />
+        <option value="$PROJECT_DIR$/includes/model/DiscountSaved.php" />
+        <option value="$PROJECT_DIR$/includes/views/home.php" />
+        <option value="$PROJECT_DIR$/includes/template/header.php" />
+        <option value="$PROJECT_DIR$/includes/controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/includes/model/Discount.php" />
+        <option value="$PROJECT_DIR$/includes/views/search.php" />
+        <option value="$PROJECT_DIR$/includes/model/Company.php" />
       </list>
     </option>
   </component>
@@ -239,28 +276,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="discountnow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="discountnow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -401,7 +416,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2907916" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2907916" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -469,35 +484,37 @@
           <line>8</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/views/company_profile.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/controllers/CompanyController.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/controllers/CompanyController.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/views/search.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/views/search.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="72" />
+      <option name="time" value="89" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/views/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/model/Type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5813953">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <marker date="1452768256000" expanded="true" signature="133:166" placeholder="SELECT * FRO..type..." />
-            <marker date="1452768256000" expanded="true" signature="541:548" placeholder="SELECT * FRO..type..." />
-            <marker date="1452768256000" expanded="true" signature="541:976" placeholder="SELECT t.id,..type..." />
-            <marker date="1452768256000" expanded="true" signature="1258:1282" placeholder="SELECT title..type..." />
-            <marker date="1452768256000" expanded="true" signature="1258:1300" placeholder="SELECT id,na..type..." />
-            <marker date="1452768256000" expanded="true" signature="1584:1617" placeholder="SELECT * FRO..type..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
@@ -580,14 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/views/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -636,39 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45169714">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/model/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8333333">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="74" selection-end-column="6" />
-          <folding>
-            <marker date="1452870779000" expanded="true" signature="219:519" placeholder="SELECT compa..company..." />
-            <marker date="1452870779000" expanded="true" signature="826:870" placeholder="SELECT COUNT..company..." />
-            <marker date="1452870779000" expanded="true" signature="1292:1328" placeholder="SELECT * FRO..company..." />
-            <marker date="1452870779000" expanded="true" signature="1720:1758" placeholder="SELECT * FRO..company..." />
-            <marker date="1452870779000" expanded="true" signature="1720:1761" placeholder="SELECT * FRO..company..." />
-            <marker date="1452870779000" expanded="true" signature="2122:2170" placeholder="UPDATE compa..." />
-            <marker date="1452870779000" expanded="true" signature="2122:2177" placeholder="UPDATE compa..." />
-            <marker date="1452870779000" expanded="true" signature="2122:2185" placeholder="UPDATE compa..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/views/company_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6866841">
-          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/controllers/SessionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -697,14 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27415144">
           <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -749,17 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/template/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2083333">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="4" selection-end-line="96" selection-end-column="10" />
-          <folding>
-            <marker date="1452869108000" expanded="true" signature="343:360" placeholder="..." />
-            <marker date="1452869108000" expanded="true" signature="932:963" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/template/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5">
@@ -797,28 +754,6 @@
         <state vertical-scroll-proportion="-13.125">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/model/Discount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.10177">
-          <caret line="125" column="67" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
-          <folding>
-            <marker date="1453040937000" expanded="true" signature="281:303" placeholder="SELECT * FRO..discount..." />
-            <marker date="1453040937000" expanded="true" signature="566:607" placeholder="SELECT title..discount..." />
-            <marker date="1453040937000" expanded="true" signature="939:976" placeholder="SELECT * FRO..discount..." />
-            <marker date="1453040937000" expanded="true" signature="1381:1504" placeholder="SELECT * FRO..discount..." />
-            <marker date="1453040937000" expanded="true" signature="1854:1977" placeholder="SELECT * FRO..discount..." />
-            <marker date="1453040937000" expanded="true" signature="2277:2359" placeholder="SELECT disco..discount_codes..." />
-            <marker date="1453040937000" expanded="true" signature="2647:2689" placeholder="SELECT * FRO..discount..." />
-            <marker date="1453040937000" expanded="true" signature="3220:3455" placeholder="SELECT d.tit..discount..." />
-            <marker date="1453040937000" expanded="true" signature="3220:3501" placeholder="SELECT d.id,..discount..." />
-            <marker date="1453040937000" expanded="true" signature="4096:4140" placeholder="INSERT INTO discount..." />
-            <marker date="1453040937000" expanded="true" signature="4096:4311" placeholder="INSERT INTO ..discount..." />
-            <marker date="1453040937000" expanded="true" signature="4096:4402" placeholder="INSERT INTO ..discount..." />
-            <marker date="1453040937000" expanded="true" signature="4096:4467" placeholder="INSERT INTO ..discount..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -862,24 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/model/DiscountSaved.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <marker date="1452590242000" expanded="true" signature="384:573" placeholder="SELECT disco..discount..." />
-            <marker date="1452590242000" expanded="true" signature="384:576" placeholder="SELECT disco..discount..." />
-            <marker date="1452590242000" expanded="true" signature="1003:1056" placeholder="SELECT id FR..discount_saved..." />
-            <marker date="1452590242000" expanded="true" signature="1003:1070" placeholder="SELECT id FR..discount_saved..." />
-            <marker date="1452590242000" expanded="true" signature="1003:1079" placeholder="SELECT id FR..discount_saved..." />
-            <marker date="1452590242000" expanded="true" signature="1564:1634" placeholder="DELETE FROM ..." />
-            <marker date="1452590242000" expanded="true" signature="2005:2061" placeholder="INSERT INTO discount_saved..." />
-            <marker date="1452590242000" expanded="true" signature="2005:2063" placeholder="INSERT INTO discount_saved..." />
-            <marker date="1452590242000" expanded="true" signature="2005:2078" placeholder="INSERT INTO discount_saved..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/model/DiscountCodes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.9583335">
@@ -917,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/template/javascript/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.4054054">
           <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
@@ -929,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/views/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.862745">
+        <state vertical-scroll-proportion="1.8426967">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
         </state>
@@ -937,9 +854,132 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/views/my_discount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3524804">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.15665796">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5691906">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/controllers/CompanyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5874674">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/company_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52741516">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/model/DiscountSaved.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84334207">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+          <folding>
+            <marker date="1453148165000" expanded="true" signature="384:573" placeholder="SELECT disco..discount..." />
+            <marker date="1453148165000" expanded="true" signature="384:576" placeholder="SELECT disco..discount..." />
+            <marker date="1453148165000" expanded="true" signature="1003:1056" placeholder="SELECT id FR..discount_saved..." />
+            <marker date="1453148165000" expanded="true" signature="1003:1070" placeholder="SELECT id FR..discount_saved..." />
+            <marker date="1453148165000" expanded="true" signature="1003:1079" placeholder="SELECT id FR..discount_saved..." />
+            <marker date="1453148165000" expanded="true" signature="1564:1634" placeholder="DELETE FROM ..." />
+            <marker date="1453148165000" expanded="true" signature="2005:2061" placeholder="INSERT INTO discount_saved..." />
+            <marker date="1453148165000" expanded="true" signature="2005:2063" placeholder="INSERT INTO discount_saved..." />
+            <marker date="1453148165000" expanded="true" signature="2005:2078" placeholder="INSERT INTO discount_saved..." />
+            <marker date="1453148165000" expanded="true" signature="2350:2551" placeholder="SELECT disco..discount..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="13" column="108" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="108" />
+          <folding>
+            <marker date="1453148250000" expanded="true" signature="1351:1389" placeholder="..." />
+            <marker date="1453148250000" expanded="true" signature="1449:1509" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/model/Discount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6475196">
+          <caret line="163" column="73" selection-start-line="163" selection-start-column="73" selection-end-line="163" selection-end-column="73" />
+          <folding>
+            <marker date="1453152992000" expanded="true" signature="281:303" placeholder="SELECT * FRO..discount..." />
+            <marker date="1453152992000" expanded="true" signature="566:607" placeholder="SELECT title..discount..." />
+            <marker date="1453152992000" expanded="true" signature="939:976" placeholder="SELECT * FRO..discount..." />
+            <marker date="1453152992000" expanded="true" signature="1381:1504" placeholder="SELECT * FRO..discount..." />
+            <marker date="1453152992000" expanded="true" signature="1854:1977" placeholder="SELECT * FRO..discount..." />
+            <marker date="1453152992000" expanded="true" signature="2277:2359" placeholder="SELECT disco..discount_codes..." />
+            <marker date="1453152992000" expanded="true" signature="2647:2689" placeholder="SELECT * FRO..discount..." />
+            <marker date="1453152992000" expanded="true" signature="3220:3457" placeholder="SELECT d.tit..discount..." />
+            <marker date="1453152992000" expanded="true" signature="3220:3503" placeholder="SELECT d.id,..discount..." />
+            <marker date="1453152992000" expanded="true" signature="4098:4142" placeholder="INSERT INTO discount..." />
+            <marker date="1453152992000" expanded="true" signature="4098:4313" placeholder="INSERT INTO ..discount..." />
+            <marker date="1453152992000" expanded="true" signature="4098:4404" placeholder="INSERT INTO ..discount..." />
+            <marker date="1453152992000" expanded="true" signature="4098:4469" placeholder="INSERT INTO ..discount..." />
+            <marker date="1453152992000" expanded="true" signature="5383:5438" placeholder="SELECT * FRO..discount..." />
+            <marker date="1453152992000" expanded="true" signature="5422:5430" placeholder="SELECT * FRO..discount..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/views/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9583335">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/model/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.708333">
+          <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+          <folding>
+            <marker date="1453190805000" expanded="true" signature="219:519" placeholder="SELECT compa..company..." />
+            <marker date="1453190805000" expanded="true" signature="826:870" placeholder="SELECT COUNT..company..." />
+            <marker date="1453190805000" expanded="true" signature="1292:1328" placeholder="SELECT * FRO..company..." />
+            <marker date="1453190805000" expanded="true" signature="1720:1758" placeholder="SELECT * FRO..company..." />
+            <marker date="1453190805000" expanded="true" signature="1720:1761" placeholder="SELECT * FRO..company..." />
+            <marker date="1453190805000" expanded="true" signature="2122:2170" placeholder="UPDATE compa..." />
+            <marker date="1453190805000" expanded="true" signature="2122:2177" placeholder="UPDATE compa..." />
+            <marker date="1453190805000" expanded="true" signature="2122:2185" placeholder="UPDATE compa..." />
+            <marker date="1453190805000" expanded="true" signature="2603:2734" placeholder="SELECT c.id,..company..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/template/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73876405">
+          <caret line="91" column="42" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="42" />
+          <folding>
+            <marker date="1453150275000" expanded="true" signature="343:360" placeholder="..." />
+            <marker date="1453150275000" expanded="true" signature="932:963" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -108,8 +108,8 @@ class Discount extends Model
         try{
             $query = "SELECT d.id, d.title, d.description, d.image_id, d.start_date, d.end_date
                       FROM discount d
-                      JOIN company c
-                      WHERE d.company_id = c.id
+                      LEFT JOIN company c
+                      ON d.company_id = c.id
                       AND c.user_id = 13
                       ORDER BY d.start_date";
 
@@ -156,6 +156,18 @@ class Discount extends Model
             return ($stmt->execute())? true: false;
         }catch (PDOException $e){
             return $e->getMessage();
+        }
+    }
+
+    public function searchForDiscount($search){
+        $search = '%'.$search.'%';
+        $query = "SELECT * FROM discount WHERE title LIKE :search LIMIT 8";
+        try{
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute(array(":search"=>$search));
+            return $stmt->fetchAll();
+        }catch (PDOException $e){
+            return  $e;
         }
     }
 }

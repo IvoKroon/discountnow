@@ -86,19 +86,11 @@ $header = new HeaderController();
     </div>
   </nav>
 </div>
-
-<!--<div class="admin_nav_holder">-->
-<!--  <div class="admin_nav_container">-->
-<!--    <ul class="admin_nav">-->
-<!--      <li><a class="--><?//= ($header->setActive() == "saved")?"active":""; ?><!--">Opgeslagen</a></li>-->
-<!--      <li><a class="--><?//= ($header->setActive() == "saved")?"active":""; ?><!--">Profiel</a></li>-->
-<!--    </ul>-->
-<!--  </div>-->
-<!--</div>-->
-<!-- SEARCH BAR -->
 <div class="search_holder">
   <div class="search_bar_container">
-    <input type="text" class="text_fields" placeholder="Zoeken..." title="Search for:" /></label><button class="search_button" >Zoeken</button>
+    <form method="post" action="<?= ROOT_URL."search" ?>">
+      <input type="text" name="search_text" class="text_fields" placeholder="Zoeken..." title="Search for:" /><input type="submit" name="submit" class="search_button" value="Zoeken">
+    </form>
   </div>
 </div>
 
